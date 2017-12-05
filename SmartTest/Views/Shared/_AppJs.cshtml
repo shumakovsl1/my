@@ -1,0 +1,15 @@
+﻿@using SmartCom.BL.Models;
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        var x = (IUserInfo)ViewBag.UserInfo;
+        <script>
+            Ext.define('SmartCom.UserInfo', {
+                userName: '@x.Name',
+                roles:[ @string.Join(",", x.Roles.Select(y=>String.Format("'{0}'",y.ToLower())))
+            });
+        </script>
+    }
+
+}
