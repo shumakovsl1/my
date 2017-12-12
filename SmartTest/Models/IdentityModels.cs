@@ -4,8 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
-using TestSmartCom.DAL;
-using SmartTest.DAL;
+using SmartCom.DAL;
 
 namespace SmartTest.Models
 {

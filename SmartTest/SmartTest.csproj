@@ -732,6 +732,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controller\CustomerController.js" />
+    <Content Include="Scripts\login\appLogin.js" />
     <Content Include="Scripts\app\model\Customer.js" />
     <Content Include="Scripts\app\model\Item.js" />
     <Content Include="Scripts\app\model\Order.js" />
@@ -742,7 +743,7 @@
     <Content Include="Scripts\app\store\Orders.js" />
     <Content Include="Scripts\app\view\AdminControlPanel.js" />
     <Content Include="Scripts\app\view\customer\List.js" />
-    <Content Include="Scripts\app\view\LoginForm.js" />
+    <Content Include="Scripts\login\LoginForm.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">

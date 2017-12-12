@@ -1,9 +1,8 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using System.Collections.Generic;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using SmartTest.Models;
-using System.Collections.Generic;
 
-namespace SmartTest.DAL
+namespace SmartTest.Models
 {
     public class ApplicationUsersInitializer : System.Data.Entity.DropCreateDatabaseAlways<ApplicationDbContext>
     {

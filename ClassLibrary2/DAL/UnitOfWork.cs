@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using SmartCom.BL;
+﻿using System.Data.Entity;
 using Autofac;
+using SmartCom.DAL.Interfaces;
 
-namespace SmartTest.DAL
+namespace SmartCom.DAL
 {
     public class UnitOfWork: IUnitOfWork
     {

@@ -87,7 +87,7 @@ namespace SmartTest.Controllers
                             {
                                 Data = new
                                 {
-                                    Url = urlHelper.Action("Index", "HomeController")
+                                    Url = urlHelper.Action("Index", "Home")
                                 },
                                 Success = true
                             };

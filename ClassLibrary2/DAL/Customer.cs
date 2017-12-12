@@ -1,7 +1,7 @@
 ﻿using System;
-using SmartCom.BL.Models;
+using SmartCom.DAL.Interfaces;
 
-namespace TestSmartCom.DAL
+namespace SmartCom.DAL
 {
     public class Customer: IEntity
     {

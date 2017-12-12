@@ -4,12 +4,17 @@
     if (User.Identity.IsAuthenticated)
     {
         var x = (IUserInfo)ViewBag.UserInfo;
-        <script>
-            Ext.define('SmartCom.UserInfo', {
-                userName: '@x.Name',
-                roles:[ @string.Join(",", x.Roles.Select(y=>String.Format("'{0}'",y.ToLower())))
-            });
-        </script>
+        if (x != null)
+        {
+            <script>
+                var roles = JSON.parse('@Html.Raw(Json.Encode(x.Roles))');
+                Ext.define('SmartCom.UserInfo',
+                    {
+                        userName: '@x.Name',
+                        roles: roles
+                    });
+            </script>
+        }
     }
 
 }

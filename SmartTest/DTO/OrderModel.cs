@@ -1,9 +1,10 @@
 ﻿using System;
 using AutoMapper.Attributes;
+using SmartCom.DAL;
 
-namespace TestSmartCom.DTO
+namespace SmartTest.DTO
 {
-    [MapsFrom(typeof(DAL.Order))]
+    [MapsFrom(typeof(Order))]
     public class OrderModel
     {
         public Guid Id { get; set; }

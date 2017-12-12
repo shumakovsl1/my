@@ -7,7 +7,7 @@
     <ProjectGuid>{C8AF6A93-0AE9-4FDA-8EEA-5EA040A0A544}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SmartCom.DAL</RootNamespace>
+    <RootNamespace>SmartCom</RootNamespace>
     <AssemblyName>SmartCom.DAL</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -55,6 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Customer.cs" />
+    <Compile Include="DAL\Interfaces\IEntity.cs" />
+    <Compile Include="DAL\Interfaces\IRepository.cs" />
+    <Compile Include="DAL\Interfaces\IUnitOfWork.cs" />
     <Compile Include="DAL\Item.cs" />
     <Compile Include="DAL\Order.cs" />
     <Compile Include="DAL\OrderItem.cs" />

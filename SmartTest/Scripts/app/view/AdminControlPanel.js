@@ -3,7 +3,7 @@
     alias: 'widget.adminControlPanel',
     layout: {
         type: 'border',
-        align: 'top'
+ 
     },
     items: [{
         region: 'north',
@@ -19,7 +19,7 @@
                 items: [{
                     xtype: 'buttongroup',
                     items: [{
-                        text: 'huy'
+                        text: 'huy1'
                         }
                     ]
                 }]
@@ -55,7 +55,7 @@
         xtype: 'container',
         id: 'content-container',
         region: 'center',
-        html: '<h1>huy</h1>'
+        html: '<h1>huy2</h1>'
     }
     ]
 });

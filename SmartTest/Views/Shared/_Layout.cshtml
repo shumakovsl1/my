@@ -9,14 +9,10 @@
 
     @Scripts.Render("~/bundles/extjs")
 
-    @{
-        Html.RenderPartial("_AppJs");
-    }
-
-    @Scripts.Render("~/bundles/app")
+    @RenderSection("Scripts")
 
 </head>
 <body>
-    @RenderBody();
+    @RenderBody()
 </body>
 </html>

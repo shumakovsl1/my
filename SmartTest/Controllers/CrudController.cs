@@ -5,6 +5,7 @@ using SmartCom.BL;
 using SmartCom.BL.Models;
 using SmartTest.DTO;
 using System.Web.Mvc;
+using SmartCom.DAL.Interfaces;
 
 namespace SmartTest.Controllers
 {

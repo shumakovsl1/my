@@ -1,9 +1,7 @@
-﻿using SmartCom.BL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace SmartCom.BL
+namespace SmartCom.DAL.Interfaces
 {
     public interface IRepository <T> where T: class, new()
     {

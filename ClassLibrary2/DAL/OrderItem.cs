@@ -1,7 +1,7 @@
-﻿using SmartCom.BL.Models;
-using System;
+﻿using System;
+using SmartCom.DAL.Interfaces;
 
-namespace TestSmartCom.DAL
+namespace SmartCom.DAL
 {
     public class OrderItem: IEntity
     {  

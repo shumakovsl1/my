@@ -1,6 +1,7 @@
 ﻿using SmartCom.BL;
-using TestSmartCom.DAL;
-using TestSmartCom.DTO;
+using SmartCom.DAL;
+using SmartCom.DAL.Interfaces;
+using SmartTest.DTO;
 
 namespace SmartTest.Controllers
 {

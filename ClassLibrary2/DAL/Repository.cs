@@ -1,12 +1,10 @@
-﻿using SmartCom.BL;
-using SmartCom.BL.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Web;
+using SmartCom.DAL.Interfaces;
 
-namespace SmartTest.DAL
+namespace SmartCom.DAL
 {
     public class Repository<T> : IRepository<T> where T : class, IEntity, new()
     {

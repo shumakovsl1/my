@@ -1,8 +1,8 @@
 ﻿using System;
 using AutoMapper.Attributes;
-using TestSmartCom.DAL;
+using SmartCom.DAL;
 
-namespace TestSmartCom.DTO
+namespace SmartTest.DTO
 {
     [MapsFrom(typeof(Customer))]
     public class CustomerModel

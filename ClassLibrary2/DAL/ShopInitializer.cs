@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using System.Web;
-using TestSmartCom.DAL;
 
-
-namespace TestSmartCom.DAL
+namespace SmartCom.DAL
 {
     public class ShopInitializer : System.Data.Entity.DropCreateDatabaseAlways<ShopContext>
     {

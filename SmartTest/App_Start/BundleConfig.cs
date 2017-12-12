@@ -31,6 +31,9 @@ namespace SmartTest
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
             "~/Scripts/app/*.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/appLogin").Include(
+                "~/Scripts/login/*.js"));
         }
     }
 }

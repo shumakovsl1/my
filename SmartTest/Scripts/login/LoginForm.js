@@ -1,4 +1,4 @@
-Ext.define('SmartCom.view.LoginForm', {
+Ext.define('SmartCom.LoginForm', {
     extend: 'Ext.form.Panel',
     title: 'Авторизация',
     alias: 'widget.loginForm',
@@ -36,16 +36,12 @@ Ext.define('SmartCom.view.LoginForm', {
                viewPort.setLoading(true);
                 form.submit({
                     success: function (form, action) {
-                      viewPort.setLoading(false);
-                      
-                        var view = Ext.create('SmartCom.view.AdminControlPanel', {
-                            region : 'center'
-                        });
-                        
-                        viewPort.removeAll();
-                        viewPort.add(view);
+                        viewPort.setLoading(false);
+                        var location = action.result.data.url;
+                        window.location.href = location;
                     },
-                    failure: function(form, action) {
+                    failure: function (form, action) {
+                        viewPort.setLoading(false);
                         Ext.Msg.alert('Failed', action.result.msg);
                     }
                 });

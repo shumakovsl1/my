@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
-using SmartCom.BL.Models;
+using SmartCom.DAL.Interfaces;
 
-namespace TestSmartCom.DAL
+namespace SmartCom.DAL
 {
     public class Item : IEntity
     {

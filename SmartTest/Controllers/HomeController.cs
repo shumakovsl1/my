@@ -12,7 +12,7 @@ namespace SmartTest.Controllers
         public HomeController(IUserInfo userInfo) : base(userInfo)
         {
         }
-
+        
         public ActionResult Index()
         {
             ViewBag.UserInfo = UserInfo;

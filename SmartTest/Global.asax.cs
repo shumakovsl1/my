@@ -3,7 +3,6 @@ using Autofac.Integration.Mvc;
 using AutoMapper.Attributes;
 using SmartCom.BL;
 using SmartCom.BL.Models;
-using SmartTest.DAL;
 using SmartTest.Models.Account;
 using System;
 using System.Collections.Generic;
@@ -13,6 +12,9 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using SmartCom.DAL;
+using SmartCom.DAL.Interfaces;
+using SmartTest.DTO;
 
 namespace SmartTest
 {
@@ -37,7 +39,7 @@ namespace SmartTest
             GlobalConfiguration.Configure(WebApiConfig.Register);
 
             AutoMapper.Mapper.Initialize(config => {
-                typeof(TestSmartCom.DTO.CustomerModel).Assembly.MapTypes(config);     
+                typeof(CustomerModel).Assembly.MapTypes(config);     
             });
 
             var builder = new ContainerBuilder();

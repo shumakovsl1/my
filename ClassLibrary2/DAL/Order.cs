@@ -1,8 +1,7 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations.Schema;
-using SmartCom.BL.Models;
+using SmartCom.DAL.Interfaces;
 
-namespace TestSmartCom.DAL
+namespace SmartCom.DAL
 {
     public class Order: IEntity
     {

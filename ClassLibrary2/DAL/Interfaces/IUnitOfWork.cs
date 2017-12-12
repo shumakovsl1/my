@@ -1,9 +1,6 @@
-﻿using SmartCom.BL.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
-namespace SmartCom.BL
+namespace SmartCom.DAL.Interfaces
 {
     public interface IUnitOfWork: IDisposable
     {
