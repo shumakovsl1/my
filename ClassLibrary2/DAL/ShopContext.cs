@@ -13,6 +13,5 @@ namespace SmartCom.DAL
         public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<OrderItem> OrdersItems { get; set; }
         public virtual DbSet<Item> Products { get; set; }
-
     }
 }

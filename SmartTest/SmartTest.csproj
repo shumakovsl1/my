@@ -224,6 +224,7 @@
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\UserManagerController.cs" />
     <Compile Include="DTO\CustomerModel.cs" />
     <Compile Include="DTO\ItemModel.cs" />
@@ -732,6 +733,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controller\CustomerController.js" />
+    <Content Include="Scripts\app\view\goods\list.js" />
     <Content Include="Scripts\login\appLogin.js" />
     <Content Include="Scripts\app\model\Customer.js" />
     <Content Include="Scripts\app\model\Item.js" />
@@ -804,6 +806,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ItemModels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
