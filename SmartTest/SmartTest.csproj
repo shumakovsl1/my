@@ -733,7 +733,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controller\CustomerController.js" />
-    <Content Include="Scripts\app\view\goods\list.js" />
+    <Content Include="Scripts\app\controller\ItemController.js" />
+    <Content Include="Scripts\app\view\item\List.js" />
     <Content Include="Scripts\login\appLogin.js" />
     <Content Include="Scripts\app\model\Customer.js" />
     <Content Include="Scripts\app\model\Item.js" />

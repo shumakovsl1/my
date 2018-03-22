@@ -1,4 +1,4 @@
-﻿Ext.define('SmartCom.view.AdminControlPanel', {
+Ext.define('SmartCom.view.AdminControlPanel', {
     extend: 'Ext.container.Container',
     alias: 'widget.adminControlPanel',
     items: [{
@@ -52,16 +52,21 @@
                 },
                 {
                     xtype: 'button',
-                    text: 'Выход',
+                    text: 'Выход'
                 }
             ]
         }]
     }],
+         
+            xtype: 'container',
+            id: 'content-container',
+            region: 'center',
+            html: '<h1>huy3</h1>'
+            //xtype: 'itemList',
+            //id: 'content-container',
+            //region: 'center'
+        
     
-        xtype: 'container',
-        id: 'content-container',
-        region: 'center',
-        html: '<h1>huy3</h1>'
     
     
 });
