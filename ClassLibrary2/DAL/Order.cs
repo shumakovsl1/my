@@ -3,9 +3,9 @@ using SmartCom.DAL.Interfaces;
 
 namespace SmartCom.DAL
 {
-    public class Order: IEntity
+    public class Order: BaseEntity
     {
-        public Guid Id { get; set; }
+   
 
         public DateTime OrderDate { get; set; }
         public DateTime ShipmentDate { get; set; }

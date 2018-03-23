@@ -27,9 +27,9 @@ namespace SmartCom.DAL
 
             var order = new List<Order>
             {
-                new Order{Status="Выполнен", OrderDate=DateTime.Parse("2005-09-01"), CustomerId=Guid.NewGuid(), OrderNumber=23},
-                 new Order{Status="Выполняется", OrderDate=DateTime.Parse("2017-09-01"), CustomerId=Guid.NewGuid(), OrderNumber=232},
-                  new Order{Status="Новый", OrderDate=DateTime.Parse("2017-06-01"), CustomerId=Guid.NewGuid(), OrderNumber=222}
+                new Order{Status="Выполнен", OrderDate=DateTime.Parse("09-01-2005"), CustomerId=Guid.NewGuid(), OrderNumber=23, ShipmentDate=DateTime.Parse("11-01-2005")},
+                 new Order{Status="Выполняется", OrderDate=DateTime.Parse("09-01-2017"), CustomerId=Guid.NewGuid(), OrderNumber=232, ShipmentDate=DateTime.Parse("12-01-2017")},
+                  new Order{Status="Новый", OrderDate=DateTime.Parse("06-01-2017"), CustomerId=Guid.NewGuid(), OrderNumber=222, ShipmentDate=DateTime.Parse("08-01-2017")}
             };
             order.ForEach(o => context.Orders.Add(o));
             context.SaveChanges();

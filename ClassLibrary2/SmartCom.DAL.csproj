@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\BaseEntity.cs" />
     <Compile Include="DAL\Customer.cs" />
     <Compile Include="DAL\Interfaces\IEntity.cs" />
     <Compile Include="DAL\Interfaces\IRepository.cs" />

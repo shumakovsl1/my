@@ -4,9 +4,9 @@ using SmartCom.DAL.Interfaces;
 
 namespace SmartCom.DAL
 {
-    public class Item : IEntity
+    public class Item : BaseEntity
     {
-        public Guid Id { get; set; }
+        
 
         public string Code { get; set; }
         public string Name { get; set; }

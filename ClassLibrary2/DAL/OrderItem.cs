@@ -3,9 +3,9 @@ using SmartCom.DAL.Interfaces;
 
 namespace SmartCom.DAL
 {
-    public class OrderItem: IEntity
+    public class OrderItem: BaseEntity
     {  
-        public Guid Id { get; set; }
+  
         public int ItemsCount { get; set; }
         public decimal ItemPrice { get; set; }
        
