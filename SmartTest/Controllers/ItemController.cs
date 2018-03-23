@@ -10,7 +10,7 @@ namespace SmartTest.Controllers
 {
     public class ItemController : CrudController<Item, ItemModel>
     {
-        protected ItemController(IUnitOfWork uow) : base(uow)
+        public ItemController(IUnitOfWork uow) : base(uow)
         {
         }
     }
