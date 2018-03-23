@@ -4,9 +4,9 @@ namespace SmartCom.DAL
 {
     public class ShopContext : DbContext
     {
-        public ShopContext() : base("ShopContext")
+        public ShopContext() : base(nameOrConnectionString: "ShopContext")
         {
-            Database.SetInitializer(new ShopInitializer());
+            Database.SetInitializer(strategy: new ShopInitializer());
         }
 
         public virtual DbSet<Customer> Customers { get; set; }

@@ -6,6 +6,7 @@ using SmartCom.BL.Models;
 using SmartTest.Models.Account;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -44,6 +45,7 @@ namespace SmartTest
 
             var builder = new ContainerBuilder();
             builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
+            builder.RegisterType<ShopContext>().As<DbContext>();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             builder.Register(x => container).As<IContainer>().SingleInstance();
             builder.RegisterType<UserInfo>().As<IUserInfo>().InstancePerRequest();
