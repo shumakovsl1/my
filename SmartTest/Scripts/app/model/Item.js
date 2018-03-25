@@ -1,4 +1,4 @@
-﻿Ext.define("SmartCom.model.Item", {
+Ext.define("SmartCom.model.Item", {
     extend: "Ext.data.Model",
-    fields: ["Id", "Code", "Name", "Price", "Category"]
+    fields: ["id", "code", "name", "price", "category"]
 });

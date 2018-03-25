@@ -1,20 +1,20 @@
-﻿Ext.define('SmartCom.store.Items', {
+Ext.define('SmartCom.store.Items', {
     extend: 'Ext.data.Store',
     model: 'SmartCom.model.Item',
     autoLoad: true,
     //data: [
-    //    { Id: '1', Code: '01', Name: 'box', Price: '12', Category: 'Auto' },
-    //    { Id: '2', Code: '02', Name: 'Asus', Price: '123', Category: 'Comp' }
+    //    { id: '1', code: '01', name: 'box', price: '12', category: 'Auto' },
+    //    { id: '2', code: '02', name: 'Asus', price: '123', category: 'Comp' }
     //]
 
     proxy: {
         type: 'ajax',
         api: {
-            read: '/Item/GetList'     //!!!!!!!!!!!!!!!     
+            read: '/Item/GetList'       
         },
         reader: {
-            type: 'json',
-            successProperty: 'success'
+            type: 'json',  
+            root: 'data'
         }
     }
 });

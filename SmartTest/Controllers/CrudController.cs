@@ -9,12 +9,12 @@ using SmartCom.DAL.Interfaces;
 
 namespace SmartTest.Controllers
 {
-    public abstract class CrudController<T, TDto> : Controller where T : class, IEntity, new()
+    public abstract class CrudController<T, TDto> : BaseController where T : class, IEntity, new()
     {
         readonly IUnitOfWork _uow;
         readonly IRepository<T> _repo;
 
-        protected CrudController(IUnitOfWork uow)
+        protected CrudController(IUnitOfWork uow, IUserInfo userInfo) : base(userInfo)
         {
             _uow = uow;
             _repo = _uow.GetRepository<T>();
@@ -65,20 +65,7 @@ namespace SmartTest.Controllers
 
 
 
-        protected OperationResult ExecuteAction(Func<object> action)
-        {
-            try
-            {
-                return new OperationResult()
-                {
-                    Data = action()
-                };
-            }
-            catch (Exception e)
-            {
-                return new OperationResult() { Data = e.ToString() };
-            }
-        }
+       
 
         protected override void Dispose(bool disposing)
         {
