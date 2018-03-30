@@ -1,9 +1,17 @@
 Ext.define('SmartCom.view.item.List', {
     extend: 'Ext.grid.Panel',
     alias: 'widget.itemList',
-    title: 'Все товары',         
+    title: 'Все товары',
     store: 'Items',
-    initComponent: function() {
+    dockedItems: [{
+        xtype: 'toolbar',
+        items: [
+            { text: 'Добавить', itemId: 'addButton' },
+            { text: 'Редактировать', itemId: 'editButton', disabled: true},
+            { text: 'Удалить', itemId: 'deleteButton', disabled: true }
+        ]
+    }],
+    initComponent: function () {
         this.columns = [
             { header: 'Id', dataIndex: 'id', flex: 1 },
             { header: 'Code', dataIndex: 'code', flex: 1 },
@@ -17,11 +25,11 @@ Ext.define('SmartCom.view.item.List', {
     }
 
     // {xtype: 'panel',
-        // region: 'west',
-        // title: 'фильтрация',
-        // collapsible: true,
-        //}
-    
+    // region: 'west',
+    // title: 'фильтрация',
+    // collapsible: true,
+    //}
+
 
 
 });

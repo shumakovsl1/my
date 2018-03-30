@@ -24,6 +24,7 @@ namespace SmartTest
             //          "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/bootstrap.css",
                       "~/Content/extjs/css/ext-all.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/extjs").Include(
