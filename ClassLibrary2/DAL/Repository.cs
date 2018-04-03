@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using SmartCom.DAL.Interfaces;
 
@@ -36,7 +37,8 @@ namespace SmartCom.DAL
 
         public T Update(T model)
         {
-            throw new NotImplementedException();
+            _dbSet.AddOrUpdate(model);
+            return _dbSet.SingleOrDefault(e => e.Id == model.Id);
         }
     }
 }

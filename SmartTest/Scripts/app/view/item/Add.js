@@ -1,8 +1,8 @@
-﻿Ext.define('SmartCom.view.item.Edit', {
+﻿Ext.define('SmartCom.view.item.Add', {
     extend: 'Ext.window.Window',
-    alias: 'widget.itemedit',
+    alias: 'widget.itemadd',
 
-    title: 'Редактирование товара',
+    title: 'Добавление товара',
     layout: 'fit',
     autoShow: true,
 

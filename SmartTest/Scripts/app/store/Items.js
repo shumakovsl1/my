@@ -10,7 +10,10 @@ Ext.define('SmartCom.store.Items', {
     proxy: {
         type: 'ajax',
         api: {
-            read: '/Item/GetList'       
+            read: 'Item/GetList',
+            create:'Item/Create',
+            update: 'Item/Update',
+            destroy: 'Item/Delete'
         },
         reader: {
             type: 'json',  
