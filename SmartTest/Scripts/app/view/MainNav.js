@@ -25,6 +25,7 @@ Ext.define('SmartCom.view.MainNav',
                                 }
 
                             }
+                           
                         ]
                     }
                 ]

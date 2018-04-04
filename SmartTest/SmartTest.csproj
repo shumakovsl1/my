@@ -734,7 +734,7 @@
     <Content Include="Scripts\app\app.js" />
     <Content Include="Scripts\app\controller\CustomerController.js" />
     <Content Include="Scripts\app\controller\ItemController.js" />
-    <Content Include="Scripts\app\model\CustomerCart.js" />
+    <Content Include="Scripts\app\model\ShopingCart.js" />
     <Content Include="Scripts\app\view\item\Add.js" />
     <Content Include="Scripts\app\view\item\Edit.js" />
     <Content Include="Scripts\app\view\item\List.js" />

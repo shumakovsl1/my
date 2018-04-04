@@ -8,7 +8,9 @@ Ext.define('SmartCom.view.item.List', {
         items: [
             { text: 'Добавить', itemId: 'addButton' },
             { text: 'Редактировать', itemId: 'editButton', disabled: true},
-            { text: 'Удалить', itemId: 'deleteButton', disabled: true }
+            { text: 'Удалить', itemId: 'deleteButton', disabled: true },
+            { text: 'Корзина', itemId: 'cartButton'}
+                                                           
         ]
     }],
     initComponent: function () {

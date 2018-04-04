@@ -25,12 +25,15 @@ Ext.define('SmartCom.controller.ItemController', {
 
                 click: this.addForm
             },
+             'itemList #cartButton': {
+                click: this.addToCart         
+            },
             'itemadd button[action=save]': {
                 click: this.addItem
             },
             'itemedit button[action=save]': {
                 click: this.updateItem
-            }
+            }         
         });
     },
 
@@ -88,6 +91,16 @@ Ext.define('SmartCom.controller.ItemController', {
             this.getItemsStore().remove(selection);
             this.getItemsStore().sync();
         }
+    },
+
+    addToCart: function () {
+
+        var shopingCart = window.shopingCart;
+        var item = this.getList().getSelectionModel().getSelection()[0];
+        if (item) {
+            shopingCart.add(item);
+        } else { Ext.MessageBox.alert('Внимание!', 'Выберите товар!');}
+
     }
 
 });
