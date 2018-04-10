@@ -22,7 +22,7 @@ namespace SmartCom.DAL
 
         IRepository<T> IUnitOfWork.GetRepository<T>()
         {
-            return _container.Resolve<IRepository<T>>();          
+            return _container.Resolve<IRepository<T>>(new NamedParameter("context", _dbContext));          
         }
         public void Dispose()
         {

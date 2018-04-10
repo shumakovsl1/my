@@ -6,10 +6,12 @@ Ext.define('SmartCom.view.item.List', {
     dockedItems: [{
         xtype: 'toolbar',
         items: [
-            { text: 'Добавить', itemId: 'addButton' },
-            { text: 'Редактировать', itemId: 'editButton', disabled: true},
+            { text: 'Добавить', itemId: 'addButton' }, '-',
+            { text: 'Редактировать', itemId: 'editButton', disabled: true }, '-',
             { text: 'Удалить', itemId: 'deleteButton', disabled: true },
-            { text: 'Корзина', itemId: 'cartButton'}
+            '->',
+            { text: 'Корзина', itemId: 'cartButt' }, '-',           
+            { text: 'Добавить в корзину', itemId: 'addToCartButt', disabled: true}
                                                            
         ]
     }],

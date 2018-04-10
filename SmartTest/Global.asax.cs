@@ -45,7 +45,7 @@ namespace SmartTest
 
             var builder = new ContainerBuilder();
             builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>));
-            builder.RegisterType<ShopContext>().As<DbContext>();
+            builder.RegisterType<ShopContext>().As<DbContext>().InstancePerLifetimeScope();
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
             builder.Register(x => container).As<IContainer>().SingleInstance();
             builder.RegisterType<UserInfo>().As<IUserInfo>().InstancePerRequest();

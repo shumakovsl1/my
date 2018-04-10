@@ -1,13 +1,13 @@
 Ext.define('SmartCom.controller.ItemController', {
     extend: 'Ext.app.Controller',
-    stores: ['Items'],
+    stores: ['Items', 'ShopingCart'],
     models: ['Item'],
-    views: ['item.List', 'item.Add', 'item.Edit'],
+    views: ['item.List', 'item.Add', 'item.Edit', 'item.ShopingCart'],
     refs: [
         {
             ref: 'list',
             selector: 'itemList'
-        }
+        }     
     ],
     init: function () {
         this.control({
@@ -18,28 +18,34 @@ Ext.define('SmartCom.controller.ItemController', {
                 click: this.editItem
             },
             'itemList #deleteButton': {
-                click: this.deleteItem
-
+                click: this.deleteItem             
             },
             'itemList #addButton': {
 
                 click: this.addForm
             },
-             'itemList #cartButton': {
-                click: this.addToCart         
+            'itemList #cartButt': {
+                click: this.showCart
+            },
+             'itemList #addToCartButt': {
+                 click: this.addToCart                
             },
             'itemadd button[action=save]': {
                 click: this.addItem
             },
             'itemedit button[action=save]': {
                 click: this.updateItem
-            }         
-        });
+            },
+            'shopingCart #deleteButt': {
+                click: this.removeFromCart
+            }
+        }); 
     },
 
     itemClick: function (grid, row) {
         grid.up('itemList').down('#editButton').setDisabled(row.length === 0);
         grid.up('itemList').down('#deleteButton').setDisabled(row.length === 0);
+        grid.up('itemList').down('#addToCartButt').setDisabled(row.length === 0);
     },
 
     addForm: function() {
@@ -85,7 +91,6 @@ Ext.define('SmartCom.controller.ItemController', {
     },
 
     removeItem: function (btn) {
-
         if (btn === 'yes') {
             var selection = this.getList().getSelectionModel().getSelection()[0];
             this.getItemsStore().remove(selection);
@@ -93,14 +98,29 @@ Ext.define('SmartCom.controller.ItemController', {
         }
     },
 
-    addToCart: function () {
-
-        var shopingCart = window.shopingCart;
-        var item = this.getList().getSelectionModel().getSelection()[0];
+    addToCart: function (btn) {
+        var shopingCart = this.getStore('ShopingCart');       
+        var item = this.getList().getSelectionModel().getSelection()[0];   
         if (item) {
-            shopingCart.add(item);
+            shopingCart.add(item);           
+            shopingCart.sync();
         } else { Ext.MessageBox.alert('Внимание!', 'Выберите товар!');}
+    },
 
+    showCart: function () {
+        var view = Ext.getCmp('cartWidget');
+        if (!view) {
+           view = this.getView('item.ShopingCart').create();
+        } else view.show();
+    },
+    removeFromCart: function(btn) {
+        var shopingCart = this.getStore('ShopingCart');
+        var item = btn.up('gridpanel').getView().getSelectionModel().getSelection()[0];
+        if (item) {
+            shopingCart.remove(item);
+            shopingCart.total -= item.data.price;
+            shopingCart.sync();
+        } else { Ext.MessageBox.alert('Внимание!', 'Выберите товар!'); }
     }
 
 });

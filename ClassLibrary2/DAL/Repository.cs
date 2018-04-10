@@ -10,10 +10,12 @@ namespace SmartCom.DAL
     public class Repository<T> : IRepository<T> where T : class, IEntity, new()
     {
 
-        DbSet<T> _dbSet;
+        readonly DbSet<T> _dbSet;
+        private readonly DbContext _context;
 
         public Repository(DbContext context) {
             _dbSet = context.Set<T>();
+            _context = context;
         }
         public T Create(T entity)
         {

@@ -33,6 +33,7 @@ namespace SmartTest.Controllers
             {
                 var dbModel = AutoMapper.Mapper.Map<T>(model);
                 _repo.Create(dbModel);
+                _uow.Commit();
                 return dbModel.Id;
             });
         }
@@ -43,6 +44,7 @@ namespace SmartTest.Controllers
             {
                 var dbModel = AutoMapper.Mapper.Map<T>(model);
                 _repo.Delete(dbModel);
+                _uow.Commit();
                 return dbModel.Id;
             });
         }
@@ -53,6 +55,7 @@ namespace SmartTest.Controllers
             {
                 var dbModel = AutoMapper.Mapper.Map<T>(model);
                 _repo.Update(dbModel);
+                _uow.Commit();
                 return dbModel.Id;
             });
         }
